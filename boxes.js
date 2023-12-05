@@ -64,3 +64,43 @@ const disappear = (event) =>{
 }
 
 box4.addEventListener("click", disappear);
+
+// box_5
+const box5=document.getElementById("5")
+const circularise=()=>{
+    const boxes=document.querySelectorAll(".box")
+    
+    for(box of boxes){
+        box.style.borderRadius=box.style.borderRadius==="50%"?"":"50%";
+        /*if(box.style.borderRadius=="50%"){
+            box.style.borderRadius="";
+        }else{
+        box.style.borderRadius="50%";}*/
+    }
+}
+box5.addEventListener("click",circularise);
+
+//box_6
+const box6=document.getElementById("6");
+document.addEventListener("mousemove",(event)=>{
+    let x=event.clientX
+    let y=event.clientY
+    box6.style.fontSize="25px"
+    box6.innerHTML=`x:${x}<br>y:${y}`;
+})
+
+//box_7 numbercopy:
+const box7=document.getElementById("7");
+const input7=document.querySelector(".container2 .seven input")
+const button7=document.querySelector(".container2 .seven button");
+const write=()=>{
+    box7.innerText=`${input7.value}`
+}
+button7.addEventListener("click",write)
+
+//box_8:
+const box8=document.getElementById("8")
+const input8=document.querySelector(".eight input")
+input8.addEventListener("keydown",(event)=>{
+    box8.innerText=event.key;
+})
